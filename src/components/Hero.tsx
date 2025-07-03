@@ -25,7 +25,7 @@ const Hero = () => {
             <div className="space-y-2">
               <p className="text-primary font-mono text-lg">Hi, my name is</p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
-                V Sai Ravi Teja
+                Sai Ravi Teja V
               </h1>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-muted-foreground">
                 Full-Stack Developer
@@ -33,7 +33,7 @@ const Hero = () => {
             </div>
             
             <p className="text-xl gradient-text font-semibold animate-text-reveal">
-              MERN & Python Enthusiast
+              MERN | Python Programmer
             </p>
             
             <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
@@ -48,12 +48,14 @@ const Hero = () => {
               >
                 Get In Touch
               </Button>
+              <a href="https://drive.google.com/file/d/1ngKQC9PpDXBeXT2ue7Cw7XFtw3yGLsGp/view?usp=drive_link" target="_blank">
               <Button 
                 variant="outline" 
                 className="border-primary text-primary hover:bg-primary/10 px-8 py-3 text-lg hover-lift"
               >
                 View Resume
               </Button>
+              </a>
             </div>
           </div>
 
@@ -63,7 +65,7 @@ const Hero = () => {
               <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center animate-bounce-slow">
                 <div className="w-72 h-72 rounded-full bg-card border-2 border-primary/30 flex items-center justify-center overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=400&fit=crop&crop=face"
+                    src="https://res.cloudinary.com/dxi9xkgna/image/upload/v1751527431/IMG_20211030_183000_752_nvmofu.jpg"
                     alt="V Sai Ravi Teja"
                     className="w-full h-full object-cover"
                   />

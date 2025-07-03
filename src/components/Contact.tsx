@@ -33,19 +33,19 @@ const Contact = () => {
     {
       name: 'GitHub',
       icon: Github,
-      url: 'https://github.com/username',
+      url: 'https://github.com/sairavitejav',
       color: 'hover:text-gray-400'
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      url: 'https://linkedin.com/in/username',
+      url: 'https://www.linkedin.com/in/sairaviteja-vudathala/',
       color: 'hover:text-blue-400'
     },
     {
       name: 'Email',
       icon: Mail,
-      url: 'mailto:raviteja@example.com',
+      url: 'mailto:sairaviteja1920@gmail.com',
       color: 'hover:text-green-400'
     }
   ];
@@ -132,13 +132,14 @@ const Contact = () => {
                   </a>
                 ))}
               </div>
-
+              <a href="https://drive.google.com/file/d/1ngKQC9PpDXBeXT2ue7Cw7XFtw3yGLsGp/view?usp=sharing" target='_blank' download="SaiRaviTejaVudathala_Resume.pdf">
               <Button 
                 className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3 hover-lift"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download Resume
               </Button>
+              </a>
             </Card>
           </div>
         </div>

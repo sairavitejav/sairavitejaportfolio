@@ -7,7 +7,7 @@ const Skills = () => {
     {
       title: 'Front-End',
       color: 'from-blue-500 to-blue-600',
-      skills: ['React.js', 'HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS', 'Responsive Design']
+      skills: ['React.js', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap']
     },
     {
       title: 'Back-End',
@@ -17,12 +17,12 @@ const Skills = () => {
     {
       title: 'Database',
       color: 'from-purple-500 to-purple-600',
-      skills: ['MongoDB', 'SQL', 'Database Design', 'Query Optimization']
+      skills: ['MongoDB', 'SQL', 'SQLite']
     },
     {
       title: 'Other Tools',
       color: 'from-cyan-500 to-cyan-600',
-      skills: ['Python', 'Git', 'GitHub', 'VS Code', 'Postman', 'npm/yarn']
+      skills: ['Python', 'Git', 'GitHub', 'VS Code', 'Postman']
     }
   ];
 

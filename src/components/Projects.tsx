@@ -5,29 +5,30 @@ import { Button } from '@/components/ui/button';
 
 const Projects = () => {
   const projects = [
-    {
-      title: 'E-Commerce Application',
-      description: 'A full-stack e-commerce platform with user authentication, product catalog, shopping cart, and payment integration. Features include admin dashboard, order management, and responsive design.',
-      technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Stripe API'],
-      liveDemo: 'https://demo-ecommerce-app.com',
-      github: 'https://github.com/username/ecommerce-app',
-      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=500&h=300&fit=crop'
-    },
+    
     {
       title: 'Task Manager',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, team collaboration features, and progress tracking with intuitive dashboard.',
-      technologies: ['React.js', 'Node.js', 'Socket.io', 'MongoDB', 'JWT'],
-      liveDemo: 'https://demo-task-manager.com',
-      github: 'https://github.com/username/task-manager',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop'
+      description: 'A real-time task management app that lets users add, edit, and delete tasks instantly. Tasks are displayed in a clean, card-based layout with a responsive and intuitive interface, ensuring seamless task tracking across all devices.',
+      technologies: ['React.js', 'Node.js', 'SQL', 'Express.js'],
+      liveDemo: 'https://tasksappsrt.vercel.app/',
+      github: 'https://github.com/sairavitejav/taskmanager-assignment-sairaviteja',
+      image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1751535133/Screenshot_2025-07-03_150159_awpzp8.png'
     },
     {
       title: 'YouTube-like Streaming Application',
-      description: 'A video streaming platform with user authentication, video upload, comments system, like/dislike functionality, and responsive video player with playlist management.',
-      technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Cloudinary'],
-      liveDemo: 'https://demo-streaming-app.com',
-      github: 'https://github.com/username/streaming-app',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop'
+      description: 'A video streaming platform with user authentication, different categories, save video temporarily, like/dislike functionality, and responsive video player with playlist management.',
+      technologies: ['React.js', 'Node.js', 'SQL', 'Express.js', 'Mock API'],
+      liveDemo: 'https://cloneyoutubesrt.vercel.app',
+      github: 'https://github.com/sairavitejav/cloneottappsrt',
+      image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1751530779/Screenshot_2025-07-03_134838_mfyiup.png',
+    },
+    {
+      title: 'E-Commerce Application',
+      description: 'A frontend e-commerce platform with user authentication, product catalog, shopping cart, and payment integration. Features include Sorting, Filtering, Searching Products.',
+      technologies: ['React.js', 'Node.js', 'SQL', 'Express.js', 'Mock API'],
+      liveDemo: 'https://ecommercesrt.vercel.app/login',
+      github: 'https://github.com/sairavitejav/srtnxttrends',
+      image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1751534640/Screenshot_2025-07-03_145202_i7uyyp.png'
     }
   ];
 
@@ -60,6 +61,13 @@ const Projects = () => {
                 <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
                   {project.description}
                 </p>
+                {project.title !== 'Task Manager' && (<>
+                  <h1 className="text-xl">User Credentials</h1>
+                <p className="text-muted-foreground mb-1 text-sm leading-relaxed">Username: rahul</p>
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">Password: rahul@2021</p>
+                </>
+              )}
+                
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (

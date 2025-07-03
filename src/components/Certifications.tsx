@@ -5,40 +5,25 @@ import { Card } from '@/components/ui/card';
 const Certifications = () => {
   const certifications = [
     {
-      name: 'React - The Complete Guide',
-      platform: 'Udemy',
+      name: 'Full Stack Web Development',
+      platform: 'NxtWave',
+      year: '2025',
+      image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1751537692/Screenshot_2025-07-03_154352_wuro6p.png',
+      link: 'https://certificates.ccbp.in/intensive/irc?id=KW1DX228FM'
+    },
+    {
+      name: 'Front-End Development',
+      platform: 'Smart Internz',
       year: '2023',
-      icon: '⚛️'
+      image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1751539332/Screenshot_2025-07-03_161134_uospmf.png',
+      link: 'https://drive.google.com/file/d/1mit6DJWEBY26uNeQxXphTKxfCjDrdaf7/view?usp=sharing'
     },
     {
-      name: 'Node.js, Express & MongoDB Bootcamp',
-      platform: 'Udemy',
-      year: '2023',
-      icon: '🟢'
-    },
-    {
-      name: 'JavaScript Algorithms and Data Structures',
-      platform: 'freeCodeCamp',
-      year: '2023',
-      icon: '📊'
-    },
-    {
-      name: 'Python for Data Science',
-      platform: 'Coursera',
+      name: 'Python Programming',
+      platform: 'NPTEL',
       year: '2022',
-      icon: '🐍'
-    },
-    {
-      name: 'Responsive Web Design',
-      platform: 'freeCodeCamp',
-      year: '2022',
-      icon: '🎨'
-    },
-    {
-      name: 'Git & GitHub Masterclass',
-      platform: 'Udemy',
-      year: '2022',
-      icon: '📚'
+      image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1751539284/Screenshot_2025-07-03_161106_hxdnlj.png',
+      link: 'https://drive.google.com/file/d/189S9pMp6FCefb3zqXtfAa7Y8asxxgg8q/view?usp=sharing'
     }
   ];
 
@@ -57,12 +42,14 @@ const Certifications = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
+            <a href={cert.link} target="_blank">
             <Card key={index} className="p-6 hover-lift glow-on-hover text-center">
-              <div className="text-4xl mb-4">{cert.icon}</div>
-              <h3 className="text-lg font-semibold mb-2 text-foreground">{cert.name}</h3>
+              <h2 className="text-lg font-semibold mb-2 text-foreground">{cert.name}</h2>
+              <img src={cert.image} alt={cert.name} />
               <p className="text-primary font-medium mb-1">{cert.platform}</p>
               <p className="text-muted-foreground text-sm">{cert.year}</p>
             </Card>
+            </a>
           ))}
         </div>
       </div>
