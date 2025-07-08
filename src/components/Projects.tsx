@@ -15,20 +15,20 @@ const Projects = () => {
       image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1751535133/Screenshot_2025-07-03_150159_awpzp8.png'
     },
     {
-      title: 'YouTube-like Streaming Application',
-      description: 'A video streaming platform with user authentication, different categories, save video temporarily, like/dislike functionality, and responsive video player with playlist management.',
-      technologies: ['React.js', 'Node.js', 'SQL', 'Express.js', 'Mock API'],
-      liveDemo: 'https://cloneyoutubesrt.vercel.app',
-      github: 'https://github.com/sairavitejav/cloneottappsrt',
-      image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1751530779/Screenshot_2025-07-03_134838_mfyiup.png',
-    },
-    {
       title: 'E-Commerce Application',
       description: 'A frontend e-commerce platform with user authentication, product catalog, shopping cart, and payment integration. Features include Sorting, Filtering, Searching Products.',
       technologies: ['React.js', 'Node.js', 'SQL', 'Express.js', 'Mock API'],
       liveDemo: 'https://ecommercesrt.vercel.app/login',
       github: 'https://github.com/sairavitejav/srtnxttrends',
       image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1751534640/Screenshot_2025-07-03_145202_i7uyyp.png'
+    },
+    {
+      title: 'YouTube-like Streaming Application',
+      description: 'A video streaming platform with user authentication, different categories, save video temporarily, like/dislike functionality, and responsive video player with playlist management.',
+      technologies: ['React.js', 'Node.js', 'SQL', 'Express.js', 'Mock API'],
+      liveDemo: 'https://cloneyoutubesrt.vercel.app',
+      github: 'https://github.com/sairavitejav/cloneottappsrt',
+      image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1751530779/Screenshot_2025-07-03_134838_mfyiup.png',
     }
   ];
 
