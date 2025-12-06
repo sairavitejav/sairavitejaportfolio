@@ -65,7 +65,7 @@ const Hero = () => {
               <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center animate-bounce-slow">
                 <div className="w-72 h-72 rounded-full bg-card border-2 border-primary/30 flex items-center justify-center overflow-hidden">
                   <img 
-                    src="https://res.cloudinary.com/dxi9xkgna/image/upload/v1751527431/IMG_20211030_183000_752_nvmofu.jpg"
+                    src="https://res.cloudinary.com/dxi9xkgna/image/upload/v1764991550/Professional_Photo_SRT_kshvuy.png"
                     alt="V Sai Ravi Teja"
                     className="w-full h-full object-cover"
                   />
