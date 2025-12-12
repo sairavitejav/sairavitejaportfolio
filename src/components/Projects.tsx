@@ -5,7 +5,14 @@ import { Button } from '@/components/ui/button';
 
 const Projects = () => {
   const projects = [
-    
+    {
+      title: 'Logistics & Fleet Management',
+      description: 'Built a full-stack Logistics & Fleet Management System with real-time delivery tracking, role- based dashboards, Razorpay, and automated driver-customer communication. Implemented a Node.js/Express+MongoDB backend with Socket.IO and JWT auth, and a React/Vite frontend featuring live maps, analytics, and optimized state management.',
+      technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Socket.IO'],
+      liveDemo: 'https://logistics-and-fleet-management.vercel.app/',
+      github: 'https://github.com/sairavitejav/logistics_and_fleet_management',
+      image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1765548301/Screenshot_2025-12-12_192530_bh3nyh.png',
+    },    
     {
       title: 'Task Manager',
       description: 'A real-time task management app that lets users add, edit, and delete tasks instantly. Tasks are displayed in a clean, card-based layout with a responsive and intuitive interface, ensuring seamless task tracking across all devices.',
@@ -21,14 +28,6 @@ const Projects = () => {
       liveDemo: 'https://ecommercesrt.vercel.app/login',
       github: 'https://github.com/sairavitejav/srtnxttrends',
       image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1751534640/Screenshot_2025-07-03_145202_i7uyyp.png'
-    },
-    {
-      title: 'YouTube-like Streaming Application',
-      description: 'A video streaming platform with user authentication, different categories, save video temporarily, like/dislike functionality, and responsive video player with playlist management.',
-      technologies: ['React.js', 'Node.js', 'SQL', 'Express.js', 'Mock API'],
-      liveDemo: 'https://cloneyoutubesrt.vercel.app',
-      github: 'https://github.com/sairavitejav/cloneottappsrt',
-      image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1751530779/Screenshot_2025-07-03_134838_mfyiup.png',
     }
   ];
 
@@ -61,7 +60,7 @@ const Projects = () => {
                 <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
                   {project.description}
                 </p>
-                {project.title !== 'Task Manager' && (<>
+                {project.title === 'E-Commerce Application' && (<>
                   <h1 className="text-xl">User Credentials</h1>
                 <p className="text-muted-foreground mb-1 text-sm leading-relaxed">Username: rahul</p>
                 <p className="text-muted-foreground mb-4 text-sm leading-relaxed">Password: rahul@2021</p>
