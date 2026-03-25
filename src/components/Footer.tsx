@@ -9,9 +9,6 @@ const Footer = () => {
           <p className="text-muted-foreground mb-2">
             Designed & Built by V Sai Ravi Teja
           </p>
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} All rights reserved.
-          </p>
         </div>
       </div>
     </footer>
