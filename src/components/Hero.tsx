@@ -41,20 +41,20 @@ const Hero = () => {
               Currently focused on creating innovative web applications using modern technologies.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full">
               <Button 
                 onClick={scrollToContact}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg hover-lift"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto px-8 py-3 text-lg hover-lift"
               >
                 Get In Touch
               </Button>
-              <a href="https://drive.google.com/file/d/1CBNSj8KHWZMKtGB-wnk82kkny7i5zh-8/view?usp=sharing" target="_blank">
-              <Button 
-                variant="outline" 
-                className="border-primary text-primary hover:bg-primary/10 px-8 py-3 text-lg hover-lift"
-              >
-                View Resume
-              </Button>
+              <a href="https://drive.google.com/file/d/1fwAUdTL7mhxoNwPdxXKQZy96X4WUlVkQ/view?usp=sharing" target="_blank" className="w-full sm:w-auto">
+                <Button 
+                  variant="outline" 
+                  className="border-primary text-primary hover:text-white hover:bg-primary/10 w-full sm:w-auto px-8 py-3 text-lg hover-lift"
+                >
+                  View Resume
+                </Button>
               </a>
             </div>
           </div>

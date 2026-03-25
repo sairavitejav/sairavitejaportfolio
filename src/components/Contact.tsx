@@ -12,6 +12,8 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -21,12 +23,40 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Here you would typically send the form data to your backend
-    alert('Message sent! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: '7a1a8e42-f1cb-4277-845e-ef338e47fab9',
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        })
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitStatus(null), 5000); // clear status message after 5 seconds
+    }
   };
 
   const socialLinks = [
@@ -103,10 +133,21 @@ const Contact = () => {
               </div>
               <Button 
                 type="submit" 
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 hover-lift"
+                disabled={isSubmitting}
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 hover-lift disabled:opacity-70"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
+              {submitStatus === 'success' && (
+                <p className="text-green-500 text-center text-sm font-medium animate-fade-in-up">
+                  Message sent successfully! I'll get back to you soon.
+                </p>
+              )}
+              {submitStatus === 'error' && (
+                <p className="text-destructive text-center text-sm font-medium animate-fade-in-up">
+                  Failed to send message. Please try again or contact me directly.
+                </p>
+              )}
             </form>
           </Card>
 
@@ -132,7 +173,7 @@ const Contact = () => {
                   </a>
                 ))}
               </div>
-              <a href="https://drive.google.com/file/d/1CBNSj8KHWZMKtGB-wnk82kkny7i5zh-8/view?usp=sharing" target='_blank' download="SaiRaviTejaVudathala_Resume.pdf">
+              <a href="https://drive.google.com/file/d/1fwAUdTL7mhxoNwPdxXKQZy96X4WUlVkQ/view?usp=sharing" target='_blank' download="VudathalaSaiRaviTeja_Resume.pdf">
               <Button 
                 className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3 hover-lift"
               >

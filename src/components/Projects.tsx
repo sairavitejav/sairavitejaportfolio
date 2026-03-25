@@ -12,6 +12,14 @@ const Projects = () => {
       liveDemo: 'https://logistics-and-fleet-management.vercel.app/',
       github: 'https://github.com/sairavitejav/logistics_and_fleet_management',
       image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1765548301/Screenshot_2025-12-12_192530_bh3nyh.png',
+    },
+    {
+      title: 'Finance Tracker',
+      description: 'Developed a full-stack Personal Finance Tracker using MERN stack (MongoDB, Express.js, React.js, Node.js) with JWT-based authentication. Implemented features like transaction management, category-based tracking, monthly budget calculation, and real-time data visualization using Recharts. Designed responsive UI with protected routes, optimized state management, and improved user experience with loaders and dynamic dashboards.',
+      technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js'],
+      liveDemo: 'https://finance-tracker-black-iota.vercel.app/',
+      github: 'https://github.com/sairavitejav/Finance_Tracker.git',
+      image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1774425905/Screenshot_2026-03-25_133427_wls8ee.png'
     },    
     {
       title: 'Task Manager',
@@ -20,14 +28,6 @@ const Projects = () => {
       liveDemo: 'https://tasksappsrt.vercel.app/',
       github: 'https://github.com/sairavitejav/taskmanager-assignment-sairaviteja',
       image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1751535133/Screenshot_2025-07-03_150159_awpzp8.png'
-    },
-    {
-      title: 'E-Commerce Application',
-      description: 'A frontend e-commerce platform with user authentication, product catalog, shopping cart, and payment integration. Features include Sorting, Filtering, Searching Products.',
-      technologies: ['React.js', 'Node.js', 'SQL', 'Express.js', 'Mock API'],
-      liveDemo: 'https://ecommercesrt.vercel.app/login',
-      github: 'https://github.com/sairavitejav/srtnxttrends',
-      image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1751534640/Screenshot_2025-07-03_145202_i7uyyp.png'
     }
   ];
 
