@@ -48,7 +48,7 @@ const Hero = () => {
               >
                 Get In Touch
               </Button>
-              <a href="https://drive.google.com/file/d/1fwAUdTL7mhxoNwPdxXKQZy96X4WUlVkQ/view?usp=sharing" target="_blank" className="w-full sm:w-auto">
+              <a href="https://drive.google.com/file/d/1pXsp8hFmBGADUsABYfTBHLNR6bQZtzrJ/view?usp=drive_link" target="_blank" className="w-full sm:w-auto">
                 <Button 
                   variant="outline" 
                   className="border-primary text-primary hover:text-white hover:bg-primary/10 w-full sm:w-auto px-8 py-3 text-lg hover-lift"

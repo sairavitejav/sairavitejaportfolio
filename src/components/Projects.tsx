@@ -22,12 +22,12 @@ const Projects = () => {
       image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1774425905/Screenshot_2026-03-25_133427_wls8ee.png'
     },    
     {
-      title: 'Task Manager',
-      description: 'A real-time task management app that lets users add, edit, and delete tasks instantly. Tasks are displayed in a clean, card-based layout with a responsive and intuitive interface, ensuring seamless task tracking across all devices.',
-      technologies: ['React.js', 'Node.js', 'SQL', 'Express.js'],
-      liveDemo: 'https://tasksappsrt.vercel.app/',
-      github: 'https://github.com/sairavitejav/taskmanager-assignment-sairaviteja',
-      image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1751535133/Screenshot_2025-07-03_150159_awpzp8.png'
+      title: 'E-Commerce Full-Stack Application',
+      description: 'Developed a full-stack E-Commerce application using MERN stack with JWT-based authentication. Implemented features like product listing, search, filtering, cart management, and order placement. Built admin functionalities for managing products (add, update, delete) with secure role-based access control. Designed RESTful APIs and a responsive UI with protected routes and reusable components for a seamless user experience.',
+      technologies: ['React.js', 'Node.js', 'MONGODB', 'Express.js'],
+      liveDemo: 'https://e-commerce-full-stack-orpin.vercel.app/',
+      github: 'https://github.com/sairavitejav/E-Commerce-Full-Stack.git',
+      image: 'https://res.cloudinary.com/dxi9xkgna/image/upload/v1776495502/Screenshot_2026-04-18_122642_flvaq5.png'
     }
   ];
 

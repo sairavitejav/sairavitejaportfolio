@@ -173,7 +173,7 @@ const Contact = () => {
                   </a>
                 ))}
               </div>
-              <a href="https://drive.google.com/file/d/1fwAUdTL7mhxoNwPdxXKQZy96X4WUlVkQ/view?usp=sharing" target='_blank' download="VudathalaSaiRaviTeja_Resume.pdf">
+              <a href="https://drive.google.com/file/d/1pXsp8hFmBGADUsABYfTBHLNR6bQZtzrJ/view?usp=drive_link" target='_blank' download="VudathalaSaiRaviTeja_Resume.pdf">
               <Button 
                 className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3 hover-lift"
               >
