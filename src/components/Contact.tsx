@@ -95,92 +95,100 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Form */}
-          <Card className="p-8 hover-lift">
+          <Card className="p-8 hover-lift h-full flex flex-col">
             <h3 className="text-2xl font-semibold mb-6 text-foreground">Send a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <Input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="bg-secondary/50 border-border focus:border-primary"
-                />
+            <form onSubmit={handleSubmit} className="flex-1 flex flex-col">
+              <div className="space-y-6 flex-grow">
+                <div>
+                  <Input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="bg-secondary/50 border-border focus:border-primary"
+                  />
+                </div>
+                <div>
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="bg-secondary/50 border-border focus:border-primary"
+                  />
+                </div>
+                <div>
+                  <Textarea
+                    name="message"
+                    placeholder="Your Message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={5}
+                    className="bg-secondary/50 border-border focus:border-primary resize-none"
+                  />
+                </div>
               </div>
-              <div>
-                <Input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="bg-secondary/50 border-border focus:border-primary"
-                />
+              <div className="mt-auto pt-6">
+                <Button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 hover-lift disabled:opacity-70"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </Button>
+                {submitStatus === 'success' && (
+                  <p className="text-green-500 text-center text-sm font-medium animate-fade-in-up mt-2">
+                    Message sent successfully! I'll get back to you soon.
+                  </p>
+                )}
+                {submitStatus === 'error' && (
+                  <p className="text-destructive text-center text-sm font-medium animate-fade-in-up mt-2">
+                    Failed to send message. Please try again or contact me directly.
+                  </p>
+                )}
               </div>
-              <div>
-                <Textarea
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={5}
-                  className="bg-secondary/50 border-border focus:border-primary resize-none"
-                />
-              </div>
-              <Button 
-                type="submit" 
-                disabled={isSubmitting}
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 hover-lift disabled:opacity-70"
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </Button>
-              {submitStatus === 'success' && (
-                <p className="text-green-500 text-center text-sm font-medium animate-fade-in-up">
-                  Message sent successfully! I'll get back to you soon.
-                </p>
-              )}
-              {submitStatus === 'error' && (
-                <p className="text-destructive text-center text-sm font-medium animate-fade-in-up">
-                  Failed to send message. Please try again or contact me directly.
-                </p>
-              )}
             </form>
           </Card>
 
           {/* Contact Info & Social Links */}
           <div className="space-y-8">
-            <Card className="p-8 hover-lift">
-              <h3 className="text-2xl font-semibold mb-6 text-foreground">Let's Connect</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                I'm currently looking for new opportunities in full-stack development. 
-                Whether you have a question or just want to say hi, I'll try my best to get back to you!
-              </p>
-              
-              <div className="flex space-x-6 mb-8">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`text-muted-foreground ${social.color} transition-colors duration-300`}
-                  >
-                    <social.icon className="w-6 h-6" />
-                  </a>
-                ))}
+            <Card className="p-8 hover-lift h-full flex flex-col">
+              <div>
+                <h3 className="text-2xl font-semibold mb-6 text-foreground">Let's Connect</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  I'm currently looking for new opportunities in full-stack development. 
+                  Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                </p>
               </div>
-              <a href="https://drive.google.com/file/d/1pXsp8hFmBGADUsABYfTBHLNR6bQZtzrJ/view?usp=drive_link" target='_blank' download="VudathalaSaiRaviTeja_Resume.pdf">
-              <Button 
-                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3 hover-lift"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Download Resume
-              </Button>
-              </a>
+              
+              <div className="mt-auto space-y-6">
+                <div className="flex space-x-6">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`text-muted-foreground ${social.color} transition-colors duration-300`}
+                    >
+                      <social.icon className="w-6 h-6" />
+                    </a>
+                  ))}
+                </div>
+                <a href="https://drive.google.com/file/d/1ycxX-UVmwHJoIaAccH2UqLyMgeZ9RSu1/view?usp=drive_link" target='_blank' download="VudathalaSaiRaviTeja_Resume.pdf" className="block">
+                  <Button 
+                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3 hover-lift"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Download Resume
+                  </Button>
+                </a>
+              </div>
             </Card>
           </div>
         </div>

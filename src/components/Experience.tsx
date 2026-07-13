@@ -6,7 +6,7 @@ const Experience = () => {
   const experiences = [
     {
       role: 'Software Development Mentor',
-      duration: 'July 2025 - Present',
+      duration: 'July 2025 - June 2026',
       description: [
         'Mentored 50+ students in Full Stack Development with a strong focus on hands-on coding and real-world problem solving.',
         'Guided learners through projects, debugging, and coding assessments to strengthen technical foundations.',

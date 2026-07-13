@@ -46,7 +46,7 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden hover-lift glow-on-hover">
+            <Card key={index} className="overflow-hidden hover-lift glow-on-hover flex flex-col h-full">
               <div className="aspect-video overflow-hidden">
                 <img 
                   src={project.image} 
@@ -55,9 +55,9 @@ const Projects = () => {
                 />
               </div>
               
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-foreground">{project.title}</h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className="text-xl font-semibold mb-2 text-foreground min-h-[3.5rem] flex items-center">{project.title}</h3>
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed min-h-[12.5rem]">
                   {project.description}
                 </p>
                 {project.title === 'E-Commerce Application' && (<>
@@ -68,7 +68,7 @@ const Projects = () => {
               )}
                 
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-4 min-h-[4rem] content-start mt-auto">
                   {project.technologies.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
